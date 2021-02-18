@@ -90,12 +90,12 @@ import { Car, cars as cars_list } from './cars';
   // @TODO Add an endpoint to get a specific car
   // it should require id
   // it should fail gracefully if no matching car is found
-  app.get( "/cars/:id", ( req: Request, res: Response ) => {
+  const newLocal = app.get("/cars/:id", (req: Request, res: Response) => {
     // destruct our path params
     let { id } = req.params;
 
     // check to make sure the id is set
-    if (!id) { 
+    if (!id) {
       // respond with an error if not
       return res.status(400).send(`id is required`);
     }
@@ -104,13 +104,13 @@ import { Car, cars as cars_list } from './cars';
     const car = cars.filter((car) => car.id == id);
 
     // respond not found, if we do not have this id
-    if(car && car.length === 0) {
+    if (car && car.length === 0) {
       return res.status(404).send(`car is not found`);
     }
 
     //return the car with a sucess status code
     res.status(200).send(car);
-  } );
+  });
   
   /// @TODO Add an endpoint to post a new car to our list
   // it should require id, type, model, and cost
