@@ -1,4 +1,4 @@
-import { add, divide } from './units';
+import { add, divide, multiply } from './units';
 
 import { expect } from 'chai';
 import 'mocha';
@@ -31,6 +31,15 @@ describe('divide', () => {
 
   it('should throw an error if div by zero', () => {
     expect(()=>{ divide(5,0) }).to.throw('div by 0')
+  });
+
+});
+
+describe('multiply', () => {
+
+  it('should multiply 4 times 2', () => {
+    const result = multiply(4,2);
+    expect(result).to.equal(8);
   });
 
 });
