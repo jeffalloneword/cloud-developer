@@ -1,13 +1,20 @@
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+*.log
+*.tmp
 export const config = {
   "dev": {
-    "username": "udagramhyattdev",
-    "password": "hs1ojslG4#Bi",
-    "database": "udagramhyattdev",
-    "host": "udagramhyattdev1.c6apfpmkitmy.us-east-1.rds.amazonaws.com",
+    "username": "",
+    "password": "",
+    "database": "",
+    "host": "",
     "dialect": "postgres",
-    "aws_region": "us-east-1",
+    "aws_region": "us-east-2",
     "aws_profile": "default",
-    "aws_media_bucket": "udagram-hyatt-dev"
+    "aws_media_bucket": "udagram-ruttner-dev"
   },
   "prod": {
     "username": "",
